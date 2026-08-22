@@ -56,18 +56,31 @@ setcpm(140/4)
     note("[f4 g4 f4@4 f4@2] -"), note("-"), note("-"), note("-"),
   ).sound("gm_oboe")
 
+  // //Clarinete
+  // const clarinete4 = cat(
+  //   //Quarta página
+  //   note("- [- [[f#4 g4] f#4]]"),
+  //   note("f#4@2 f#4 e4 d4 c4 d4 e4"),
+  //   note("d4@2 d4 a a@4"),
+  //   note("a"),
+  //   note("- - - - - - c4 d4 c4@4 c4@2 - -"),
+  //   note("-"),
+  //   note("-"),
+  //   note("-"),
+  // ).sound("gm_clarinet")
+
   //Clarinete
   const clarinete4 = cat(
     //Quarta página
     note("- [- [[f#4 g4] f#4]]"),
     note("f#4@2 f#4 e4 d4 c4 d4 e4"),
-    note("d4@2 d4 a a@4"),
+    note("d4@3 a a@4"),
     note("a"),
     note("- - - - - - c4 d4 c4@4 c4@2 - -"),
     note("-"),
     note("-"),
     note("-"),
-  ).sound("gm_clarinet")
+  ).sound("gm_clarinet:3").room(.1)
 
 //Metais
   //Trompete
@@ -157,7 +170,7 @@ setcpm(140/4)
     note("f5"),
     note("- g4 - - - f4 - -"),
     note("- g4 - - - f4 - -"),
-  ).sound("gm_violin")
+  ).sound("gm_violin:3")
 
   const violino2 = cat(
     //Segunda página
@@ -165,14 +178,14 @@ setcpm(140/4)
     note("- g4 - - - f4 - -"), note("- g4 - - - f4 - -"),
     note("- g4 - - - f4 - -"), note("- g4 - - - f4 - -"),
     note("- g4 - - - f4 - -"), note("- g4 - - - f4 - -"),
-  ).sound("gm_violin")
+  ).sound("gm_violin:3")
 
   const violino3 = cat(
     //Terceira página
     note("f4 g4"), note("f4 g4"), note("f4 g4"), note("g#4 b4"),
     note("f4 g4"), note("f4 g4"), note("f4 g4"), note("g#4 b4"),
     note("- g4 - - - f4 - -"), note("- g4 - - - f4 - -"),
-  ).sound("gm_violin")
+  ).sound("gm_violin:3")
 
   const violino4 = cat(
     //Quarta página
@@ -180,7 +193,7 @@ setcpm(140/4)
     note("- g4 - - - f4 - -"), note("- g4 - - - f4 - -"),
     note("- g4 - - - f4 - -"), note("- g4 - - - f4 - -"),
     note("- g4 - - - f4 - -"), note("- g4 - - - f4 - -"),
-  ).sound("gm_violin")
+  ).sound("gm_violin:3")
 
   //Viola
   const viola1 = cat(
@@ -244,6 +257,6 @@ setcpm(140/4)
 arrange(
   [5, stack(fagote1, harpa1, marimba1, violino1, viola1, violoncelo1)],
   [8, stack(fagote2_4,piccolo2, oboe2, marimba2, violino2, violoncelo2)],
-  [8, stack(fagote3, marimba3, clavicordio3, violino3, viola3, violoncelo3)],
+  [10, stack(fagote3, marimba3, clavicordio3, violino3, viola3, violoncelo3)],
   [8, stack(fagote2_4, piccolo4, oboe4, clarinete4, trompete4, vibrafone4, marimba4, violino4, viola4, violoncelo4)]
 )
