@@ -72,11 +72,11 @@ setcpm(140/4)
   //Clarinete
   const clarinete4 = cat(
     //Quarta página
-    note("- [- [[f#4 g4] f#4]]"),
-    note("f#4@2 f#4 e4 d4 c4 d4 e4"),
-    note("d4@3 a a@4"),
-    note("a"),
-    note("- - - - - - c4 d4 c4@4 c4@2 - -"),
+    note("- [- [[e5 f5] e5]]"),
+    note("e5@2 e5 d5 c5 a#4 c5 d5"),
+    note("c5@2 c5 g4 g4@4"),
+    note("g4"),
+    note("- - - - - - a#4 c5 a#4@4 a#4@2 - -"),
     note("-"),
     note("-"),
     note("-"),
@@ -87,8 +87,8 @@ setcpm(140/4)
   const trompete4 = cat(
     //Quarta página
     note("-"), note("-"),
-    note("a@2 a f f@4"),
-    note("f"),
+    note("g@2 g e e@4"),
+    note("e"),
     note("-"), note("-"), note("-"), note("-"),
   ).sound("gm_trumpet")
 
