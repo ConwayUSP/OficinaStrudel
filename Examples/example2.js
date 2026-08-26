@@ -2,7 +2,7 @@
 
 setcpm(140/4)
 
-$: cat(
+cat(
     note("[c2, c1]@6 - [d2, d1]"),
     note("eb2, eb1"), 
     note("ab2, ab1"), 
