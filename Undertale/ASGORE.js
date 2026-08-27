@@ -1,20 +1,6 @@
 setcpm(115)
 //https://musescore.com/hicco-friskmada/scores/3239046
 
-//modelo
-let name = stack(
-  n(`<
-  0
-  >`)
-  .scale("G4:minor")
-,
-  n(`<
-  0
-  >`)
-  .scale("F3:minor")
-).sound("gm_piano")
-
-
 let bergentrückung = stack(
   n(`<
    [[-2,-7] -7] [[ 0,-5] -5] [-1,-4]@2 
@@ -44,7 +30,7 @@ let bergentrückung = stack(
     >`)
   .scale("F3:minor")
   .gain("<0.25@8 0.5@8 0.75@8 1@8 0@8 1>")
-).sound("gm_piano")
+).sound("gm_piano").gain(1.2).adsr(".01:.1:.7:0.2").room(0.8).roomsize(1.5)
 
 let intro = stack(
   n(`<
@@ -60,81 +46,28 @@ let intro = stack(
   .scale("G4:minor")
   ,
   n(`<
-     -@28
-     [-1,2,4,6]@2 [[-7,-2] -7] [[0,-5] -5]
-     -@28
-     [-1,2,4,6]@2 [[-7,-2] -2] [[-3,-8] -3]
-     >`).scale("G4:minor")
-// ,
-//   n(`<
-//   [-12 -8 -5 -8]
-
-
-//   >`)
-//   .scale("F3:minor")
-//   .sound("gm_piano")
-).sound("gm_piano")
-
-
-let heartache0 = stack(
-  n(`<
-  0
-  >`)
-  .scale("G4:minor")
+  -@28
+  [-1,2,4,6]@2 [[-7,-2] -7] [[0,-5] -5]
+  -@28
+  [-1,2,4,6]@2 [[-7,-2] -2] [[-3,-8] -3]
+  >`).scale("G4:minor")
 ,
+  
   n(`<
-  0
+  [-12 -8 -5 -8]!4 
+  [-12 -8 -5 -8]!2 [-12, -5] [-11, -4]
+  [-10 -6 -3 -6]!4
+  [-10 -6 -3 -6]!2 [-10, -3] [-8, -1]
+  [-12 -8 -5 -8]!4 
+  [-11 -7 -4 -7]!4
+  [-10 -6 -3 -6]!4 
+  [-4, -7, -11]@2 [-3] [-2] 
   >`)
   .scale("F3:minor")
-).sound("gm_piano")
-
-
-let heartache2 = stack(
-  n(`<
-  0
-  >`)
-  .scale("G4:minor")
-,
-  n(`<
-  0
-  >`)
-  .scale("F3:minor")
-).sound("gm_piano")
-
-let piano = stack(
-  n(`<
-  0
-  >`)
-  .scale("G4:minor")
-,
-  n(`<
-  0
-  >`)
-  .scale("F3:minor")
-).sound("gm_piano")
-
-let final = stack(
-  n(`<
-  0
-  >`)
-  .scale("G4:minor")
-,
-  n(`<
-  0
-  >`)
-  .scale("F3:minor")
-).sound("gm_piano")
-
-
-
+).sound("gm_piano").gain(1.2).adsr(".01:.1:.7:.2").room(0.8).roomsize(1.5)
 
 
 arrange(
   [42, bergentrückung], //0-9
-  [64, intro] //10-18
-  // [0, heartache0] //19-26
-  // [0, heartache1] //27-34
-  // [0, heartache2] //35-40
-  // [0, piano] //41-56
-  // [0, final] //57-60
-)
+  [64, intro],
+  )
